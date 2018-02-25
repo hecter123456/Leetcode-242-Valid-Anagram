@@ -20,17 +20,7 @@ class unitest(unittest.TestCase):
 
 class Solution():
     def isAnagram(self, s, t):
-        List = []
-        for i in range(len(s)):
-            List.append(s[i])
-        for i in range(len(t)):
-            if t[i] in List:
-                List.remove(t[i])
-            else:
-                return False
-        if List == []:
-            return True
-        return False
+        return sorted(s) == sorted(t)
 
 if __name__ == '__main__':
     unittest.main()
